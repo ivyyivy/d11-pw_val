@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign-in-form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="val.js"></script>
+</head>
+
+
+<body class=" bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md max-w-md w-full">
+        <h1 class="text-2xl font-bold mb-4 text-center" id="signIn">Sign in</h1>
+        <form>
+            <div class="mb-8">
+                <label class="block text-gray-700 font-bold mb-2" for="username">
+                    User name
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="username" type="text" placeholder="Enter your username">
+            </div>
+            <div class="mb-8">
+                <label class="block text-gray-700 font-bold mb-2" for="password">
+                    Password
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="password" type="password" placeholder="Enter your password" onfocus="show()" onblur="hide()">
+            </div>
+
+            <div id="alert" class="p-2 text-center text-gray-500">
+            </div>
+
+        </form>
+        <div class="flex justify-center">
+            <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                onclick="val()">
+                Sign In
+            </button><br>
+        </div>
+        <div id="alertPart" class="invisible">
+            <div id="upl">Password has to have at least one uppercase letter</div>
+            <div id="lcl">Password has to have at least one lowercase letter</div>
+            <div id="number">Password has to have at least one number</div>
+            <div id="textl">Password has to have at least 8 letters.</div>
+        </div>
+    </div>
+</body>
+
+
+<!-- <body>
+    <div>
+        Sign in here
+    </div>
+    <div>
+        <form>
+            <label for="id">ID:</label><br>
+            <input type="text" id='id'><br>
+            <label for="password">Password:</label><br>
+            <input type="text" id='password'><br>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+    
+</body> -->
+
+</html>
